@@ -23,13 +23,9 @@ def contributors_breakdown(product, account="redhat1502", password="1502redhat")
 
     for repos in org.get_repos():
         
-        print((str(git.rate_limiting)[:5].replace("'","").replace("(",""))).replace(",","")
-        print(repos)
-        
         ## If the limit is getting low, this will let the program wait until the rate limit is reset
         if int(str(git.rate_limiting)[:5].replace("'","").replace("(","").replace(",","")) < 300:
            time_left = int(git.rate_limiting_resettime) - int(time.time())
-           print(time_left)
            time.sleep(time_left + 10)
             
         
