@@ -2,7 +2,7 @@ import pandas as pd
 from github import Github
 import time
 
-def contributors_breakdown(product, account="redhat1502", password="1502redhat"):
+def contributors_breakdown(product, account="-------", password="-------"):
     
     """
     Gets a breakdown of how many contirbutors to Red Hat products on Github work at Red Hat
